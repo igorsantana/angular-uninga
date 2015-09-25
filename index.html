@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>gumgaIO</title>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal" ng-app="app.databinding.sample">
+			<div class="slides" ng-controller="SampleController">
+				<section>
+					<h2>Atualizando Sistemas Web com AngularJS</h2>
+					<p><a>@opsigor</a> | <a>@guiseek</a> | <a>@rafaelMangolin</a></p>
+				</section>
+				<section>
+					<h3>O que é AngularJS?</h3>
+						<p>Framework mantido pela Google que é utilizado para criar aplicações <strong>Single Page</strong>. Além disso, ele permite ao programador criar suas próprias tags HTML.</p>
+						<aside class="notes">
+							<p>As SPAs são aplicações completas, desenvolvidas em JavaScript, que funcionam quase como se estivessem sendo executadas nativamente no desktop. Não tem reload</p>
+						</aside>
+				</section>
+				<section>
+					<section>
+						<h2>Pontos Fortes do AngularJS</h2>
+					</section>
+					<section>
+						<h3>Modularização</h3>
+						<img src="imgs/modules.svg" alt="">
+					</section>
+					<section>
+						<h3>Injeção de Dependência</h3>
+						<p>Modo com que o Angular faz sua modularização.</p>
+						<span data-markdown>
+							```js
+							angular.module('app.principal',
+							[
+								'app.marketing',
+								'app.financeiro',
+								'app.desenvolvimento'
+							])
+							```
+						</span>
+					</section>
+					<section>
+						<h3>2way Data Binding</h3>
+						<input type="text" ng-model="nome" style="width: 50%;height: 30px"/>
+						<p>Olá, {{ nome}}!</p>
+					</section>
+					<section>
+						<h3>Directives</h3>
+						<p>Modo com o que o programador pode definir suas próprias tags HTML.</p>
+					</section>
+				</section>
+				<section>
+					<h3>Porquê utilizar AngularJS?</h3>
+					<script type="text/javascript" src="//www.google.com/trends/embed.js?hl=pt-BR&q=AngularJS,+/m/0bsn3,+/m/026mhl&cmpt=q&tz=Etc/GMT%2B3&tz=Etc/GMT%2B3&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330"></script>
+				</section>
+			</div>
+
+		</div>
+		<script src="angular.min.js"></script>
+		<script>
+			angular.module('app.databinding.sample',[])
+			.controller('SampleController',function($scope){
+				$scope.nome = 'Uningá';
+			})
+		</script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
