@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>gumgaIO</title>
+	<title>Angular Uningá</title>
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -52,6 +52,39 @@
 					<img src="imgs/modules.svg" alt="">
 				</section>
 				<section>
+					<h3>Controllers</h3>
+					<span data-markdown>
+						```js
+						angular.module('app.principal',[])
+						    .controller('MainController',['$scope',function($scope){
+								//Código aqui
+							}])
+						```
+						```html
+						&lt;div ng-controller=&quot;MainController&quot;&gt;
+							&lt;!--  Html aqui--&gt;
+						&lt;/div&gt;
+						```
+					</span>
+
+
+				</section>
+
+				<section>
+					<h3>Services</h3>
+					<span data-markdown>
+						```js
+						angular.module('app.principal',[])
+						    .service('MainService',['$http',function($http){
+								//Código aqui
+							}])
+						```
+					</span>
+
+
+				</section>
+
+				<section>
 					<h3>Injeção de Dependência</h3>
 					<p>Modo com que o Angular faz sua modularização.</p>
 					<span data-markdown>
@@ -73,6 +106,12 @@
 					<h3>Directives</h3>
 					<p>Modo com o que o programador pode definir suas próprias tags HTML.</p>
 				</section>
+				<section>
+					<h3>Testes Unitários</h3>
+				</section>
+			</section>
+			<section>
+				<h3>Exemplo</h3>
 			</section>
 			<section>
 				<section>
@@ -92,7 +131,27 @@
 				</section>
 			</section>
 			<section>
-				<h3>Mas como eu faço pra aprender Angular?</h3>
+				<section>
+					<h3>Mas como eu faço pra aprender Angular?</h3>
+				</section>
+				<section>
+					<h3>AngularJS API Docs</h3>
+					<a href="https://docs.angularjs.org/api">
+						<img src="imgs/AngularJS-API-Docs.png" alt="AngularJS API Docs" />
+					</a>
+				</section>
+				<section>
+					<h3>Desenvolvendo com AngularJS</h3>
+					<a href="#">
+						<img src="imgs/livro-angularjs.jpg" alt="Livro Desenvolvendo com AngularJS" />
+					</a>
+				</section>
+				<section>
+					<h3>Precisa de mais?</h3>
+					<a href="#">
+						<img src="imgs/google-angularjs.png" alt="Google AngularJS" />
+					</a>
+				</section>
 			</section>
 		</div>
 
@@ -102,6 +161,13 @@
 		angular.module('app.databinding.sample', [])
 			.controller('SampleController', function($scope) {
 				$scope.nome = 'Uningá';
+				$scope.oi = [
+					'oi',
+					'tudo',
+					'bem',
+					'com',
+					'vc'
+				]
 			})
 	</script>
 	<script src="lib/js/head.min.js"></script>
