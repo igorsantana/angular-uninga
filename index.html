@@ -62,7 +62,16 @@
 				<section>
 					<h3><i>Controllers</i></h3>
 					<span data-markdown>
-						```js angular.module('app.principal',[]) .controller('MainController',['$scope',function($scope){ //Código aqui }]) ``` ```html &lt;div ng-controller=&quot;MainController&quot;&gt; &lt;!-- Html aqui--&gt; &lt;/div&gt; ```
+						```js
+						 angular.module('app.principal',[])
+						  .controller('MainController',['$scope',function($scope){
+								 //Código aqui
+							 }])
+						 ```
+						  ```html
+						 &lt;div ng-controller=&quot;MainController&quot;&gt;
+								  &lt;!-- Html aqui--&gt;
+						 &lt;/div&gt; ```
 					</span>
 					<aside class="notes">
 						<p>- Controller trabalha como um gerenciador de dados entre a view e a service
@@ -77,7 +86,12 @@
 				<section>
 					<h3><i>Services</i></h3>
 					<span data-markdown>
-						```js angular.module('app.principal',[]) .service('MainService',['$http',function($http){ //Código aqui }]) ```
+						```js
+						 angular.module('app.principal',[])
+						  .service('MainService',['$http',function($http){
+								 //Código aqui
+						 }])
+						 ```
 					</span>
 					<aside class="notes">
 						<p>- Responsável pelas requisições com APIs
@@ -93,7 +107,13 @@
 					<h3>Injeção de Dependência</h3>
 					<p>Modo com que o Angular faz sua modularização.</p>
 					<span data-markdown>
-						```js angular.module('app.principal', ['app.marketing', 'app.financeiro', 'app.desenvolvimento' ]) ```
+						```js
+						 angular.module('app.principal',
+						  [
+							 'app.marketing',
+ 	'app.financeiro',
+ 	'app.desenvolvimento'
+						  ]) ```
 					</span>
 					<aside class="notes">
 						<p>- Possibilita o reuso de serviços entre módulos
